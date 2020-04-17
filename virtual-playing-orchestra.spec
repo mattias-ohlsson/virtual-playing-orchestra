@@ -26,13 +26,23 @@ License:        Freely Available and CC-BY-SA Creative Commons Sampling Plus 1.0
 
 URL:            http://virtualplaying.com/virtual-playing-orchestra/
 Source0:        https://archive.org/download/VirtualPlayingOrchestra31WaveFiles/Virtual-Playing-Orchestra3-1-wave-files.zip
-Source1:        http://virtualplaying.com/vp-downloads/Virtual-Playing-Orchestra3-2-standard-scripts.zip
-Source2:        http://virtualplaying.com/vp-downloads/Virtual-Playing-Orchestra3-2-performance-scripts.zip
+Source1:        http://virtualplaying.com/vp-downloads/Virtual-Playing-Orchestra3-2-1-standard-scripts.zip
+Source2:        http://virtualplaying.com/vp-downloads/Virtual-Playing-Orchestra3-2-1-performance-scripts.zip
 
 BuildArch:      noarch
 
 BuildRequires:  unzip
-#Requires:       
+
+Requires:       virtual-playing-orchestra-performance-scripts
+Requires:       virtual-playing-orchestra-standard-scripts
+Requires:       virtual-playing-orchestra-iowa
+Requires:       virtual-playing-orchestra-mattiaswestlund
+Requires:       virtual-playing-orchestra-nbo2
+Requires:       virtual-playing-orchestra-nbo
+Requires:       virtual-playing-orchestra-philharmonia
+Requires:       virtual-playing-orchestra-sso
+Requires:       virtual-playing-orchestra-stamperadam
+Requires:       virtual-playing-orchestra-vsco-2-ce
 
 %description
 This is a full, free orchestral sample library featuring section and solo
@@ -42,6 +52,7 @@ instruments for woodwinds, brass, strings and percussion.
 Summary:        Iowa sound library
 License:        Freely Available
 URL:            http://theremin.music.uiowa.edu/
+Requires:       virtual-playing-orchestra
 
 %description iowa
 University of Iowa Electronic Music sound library.
@@ -52,6 +63,7 @@ Summary:        Mattias Westlund additional samples
 # ViolaSect/readme.txt
 License:        CC-BY-SA and Public Domain
 URL:            https://mattiaswestlund.net/samples/
+Requires:       virtual-playing-orchestra
 
 %description mattiaswestlund
 Additional samples from Mattias Westlund.
@@ -60,6 +72,7 @@ Additional samples from Mattias Westlund.
 Summary:        NBO sound library
 License:        CC-BY-SA
 URL:            https://www.bandshed.net/sounds/sfz/
+Requires:       virtual-playing-orchestra
 
 %description nbo
 No Budget Orchestra sound library.
@@ -72,6 +85,7 @@ Summary:        NBO sound library 2
 # Cello/CelloSect/license.txt
 License:        CC-BY-SA and Creative Commons Sampling Plus 1.0 and CC0 and CC-BY and CC-BY-NC
 URL:            https://www.bandshed.net/sounds/sfz/
+Requires:       virtual-playing-orchestra
 
 %description nbo2
 No Budget Orchestra 2 sound library.
@@ -82,6 +96,7 @@ Summary:        Philharmonia sound library
 # https://web.archive.org/web/20161206161554/http://www.philharmonia.co.uk/explore/sound_samples/viola
 License:        CC-BY-SA
 URL:            https://www.philharmonia.co.uk/explore/make_music
+Requires:       virtual-playing-orchestra
 
 %description philharmonia
 Philharmonia Orchestra sound library.
@@ -90,6 +105,7 @@ Philharmonia Orchestra sound library.
 Summary:        SSO sound library
 License:        Creative Commons Sampling Plus 1.0
 URL:            https://sso.mattiaswestlund.net/
+Requires:       virtual-playing-orchestra
 
 %description sso
 Sonatina Symphonic Orchestra sound library.
@@ -98,6 +114,7 @@ Sonatina Symphonic Orchestra sound library.
 Summary:        Stamperadam sound library
 License:        CC0
 URL:            https://freesound.org/people/stamperadam/
+Requires:       virtual-playing-orchestra
 
 %description stamperadam
 Stamperadam sound library.
@@ -106,13 +123,15 @@ Stamperadam sound library.
 Summary:        VSCO 2 CE sound library
 License:        CC0
 URL:            https://vis.versilstudios.com/vsco-community.html
+Requires:       virtual-playing-orchestra
 
 %description vsco-2-ce
 Versilian Studios Chamber Orchestra 2 Community Edition sound library.
 
 %package standard-scripts
 Summary:        Standard Orchestra scripts
-Version:        3.2
+Version:        3.2.1
+Requires:       virtual-playing-orchestra
 
 %description standard-scripts
 The Standard Orchestra uses key velocity (how fast you hit a key on your MIDI
@@ -122,7 +141,8 @@ instruments work this way.
 
 %package performance-scripts
 Summary:        Performance Orchestra scripts
-Version:        3.2
+Version:        3.2.1
+Requires:       virtual-playing-orchestra
 
 %description performance-scripts
 The Performance Orchestra uses the MOD wheel to control volume. Key velocity
@@ -656,5 +676,5 @@ rm -rf %{buildroot}%{_datadir}/soundfonts/%{name}/Documentation
 %{_datadir}/soundfonts/%{name}/Woodwinds/piccolo-SOLO-PERF.sfz
 
 %changelog
-* Sun Apr  5 2020 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 3.1-1
+* Fri Apr 17 2020 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 3.1-1
 - Initial build
