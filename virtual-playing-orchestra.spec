@@ -130,7 +130,7 @@ Versilian Studios Chamber Orchestra 2 Community Edition sound library.
 
 %package standard-scripts
 Summary:        Standard Orchestra scripts
-Version:        3.2.1
+Version:        3.2.1.1
 Requires:       virtual-playing-orchestra
 
 %description standard-scripts
@@ -141,7 +141,7 @@ instruments work this way.
 
 %package performance-scripts
 Summary:        Performance Orchestra scripts
-Version:        3.2.1
+Version:        3.2.1.1
 Requires:       virtual-playing-orchestra
 
 %description performance-scripts
