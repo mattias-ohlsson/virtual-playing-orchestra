@@ -1,6 +1,6 @@
 Name:           virtual-playing-orchestra
 Version:        3.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Orchestral sample library
 
 # For a breakdown of the licensing, see http://virtualplaying.com/virtual-playing-orchestra/#licensing
@@ -26,8 +26,8 @@ License:        Freely Available and CC-BY-SA Creative Commons Sampling Plus 1.0
 
 URL:            http://virtualplaying.com/virtual-playing-orchestra/
 Source0:        https://archive.org/download/VirtualPlayingOrchestra31WaveFiles/Virtual-Playing-Orchestra3-1-wave-files.zip
-Source1:        http://virtualplaying.com/vp-downloads/Virtual-Playing-Orchestra3-2-1-standard-scripts.zip
-Source2:        http://virtualplaying.com/vp-downloads/Virtual-Playing-Orchestra3-2-1-performance-scripts.zip
+Source1:        http://virtualplaying.com/vp-downloads/Virtual-Playing-Orchestra3-2-2-standard-scripts.zip
+Source2:        http://virtualplaying.com/vp-downloads/Virtual-Playing-Orchestra3-2-2-performance-scripts.zip
 
 BuildArch:      noarch
 
@@ -130,7 +130,7 @@ Versilian Studios Chamber Orchestra 2 Community Edition sound library.
 
 %package standard-scripts
 Summary:        Standard Orchestra scripts
-Version:        3.2.1.1
+Version:        3.2.2
 Requires:       virtual-playing-orchestra
 
 %description standard-scripts
@@ -141,7 +141,7 @@ instruments work this way.
 
 %package performance-scripts
 Summary:        Performance Orchestra scripts
-Version:        3.2.1.1
+Version:        3.2.2
 Requires:       virtual-playing-orchestra
 
 %description performance-scripts
@@ -676,5 +676,8 @@ rm -rf %{buildroot}%{_datadir}/soundfonts/%{name}/Documentation
 %{_datadir}/soundfonts/%{name}/Woodwinds/piccolo-SOLO-PERF.sfz
 
 %changelog
+* Sun Nov 08 2020 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 3.1-2
+- Update sfz scripts to 3.2.2
+
 * Fri Apr 17 2020 Mattias Ohlsson <mattias.ohlsson@inprose.com> - 3.1-1
 - Initial build
